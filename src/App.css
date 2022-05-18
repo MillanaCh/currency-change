@@ -1,38 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Koulen&family=Quicksand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Main Container */
 .App {
+  height: 100vh;
+}
+.main-body {
+  height: 80%;
+  background-color: #146281;
+}
+
+/* Header  */
+.header {
+  height: 50%;
+  background-color: #e4eaed;
+  color: #146281;
   text-align: center;
+  font-family: "Koulen", cursive;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo-name {
+  text-align: center;
+  padding: 15px;
+  font-family: "Koulen", cursive;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.currency-container {
+  font-size: 20px;
+  /* font-family: "Work Sans", sans-serif; */
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/*  Currency Part*/
+.currency-part {
+  text-align: center;
+  padding: 50px 30px 30px 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input {
+  width: 300px;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  padding: 10px;
+  height: 37px;
 }
