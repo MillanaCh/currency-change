@@ -1,23 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import  { useEffect, useState } from "react"
+import Currency from "./components/Currency";
+import Header from "./components/Header";
 
 function App() {
+  const [data, setData] = useState([]);
+  let myHeaders = new Headers();
+  myHeaders.append("apikey", "2UU7CNYRKnyVztS2jG7f8ActrRLfnZ1G");
+
+  let requestOptions = {
+    method: "GET",
+    redirect: "follow",
+    headers: myHeaders,
+  };
+
+  const fetchingTheData = async () => {
+    try {
+      let data = await fetch(
+        "https://api.apilayer.com/exchangerates_data/convert?to=USD&from=EUR&amount=5",
+        requestOptions
+      );
+      let response = await data.json();
+      setData(response);
+    } catch (error) {
+      alert(error?.message);
+    }
+  };
+  useEffect(() => {
+    fetchingTheData();
+  }, []);
+  console.log(data);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div>
+        <Header />
+      </div>
+      <div>
+        <Currency />
+      </div>
     </div>
   );
 }
