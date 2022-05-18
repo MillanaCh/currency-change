@@ -14,7 +14,7 @@ export default function Header({ data, rates, input1, select2, select1 }) {
         <div className="logo-name">
           <h1>Currency Converter</h1>
         </div>
-        <h4> Date {data.date}</h4>
+        <p> Today: {data.date}</p>
         <div className="currency-container">
           <div className="logo">
             <img src={logoEur} width="60px" height="30px" />

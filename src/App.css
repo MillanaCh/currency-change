@@ -35,6 +35,9 @@
   justify-content: space-around;
   align-items: center;
 }
+.header p {
+  font-size: 20px;
+}
 
 /*  Currency Part*/
 .currency-part {
@@ -48,5 +51,14 @@
   border-radius: 5px;
   font-size: 20px;
   padding: 10px;
+  height: 38px;
+}
+.select {
+  width: 70px;
+  border: none;
+  margin-left: 5px;
+  margin-top: 3px;
+  padding: 11px;
+  border-radius: 5px;
   height: 37px;
 }

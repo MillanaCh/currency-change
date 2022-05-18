@@ -5,17 +5,21 @@ export default function Currency(props) {
 
   return (
     <div className="currency">
-        <input
-          type="number"
-          onChange={(e) => onChangeInput(e.target.value)}
-          value={input}
-          className="input"
-        />
-        <select value={select} onChange={(e) => onChangeSelect(e.target.value)}>
-          {rates.map((el) => (
-            <option key={el}>{el}</option>
-          ))}
-        </select>
+      <input
+        type="number"
+        onChange={(e) => onChangeInput(e.target.value)}
+        value={input}
+        className="input"
+      />
+      <select
+        value={select}
+        onChange={(e) => onChangeSelect(e.target.value)}
+        className="select"
+      >
+        {rates.map((el) => (
+          <option key={el}>{el}</option>
+        ))}
+      </select>
     </div>
   );
 }

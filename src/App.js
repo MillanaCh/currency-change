@@ -20,22 +20,22 @@ function App() {
     headers: myHeaders,
   };
 
-  // const fetchingTheData = async () => {
-  //   try {
-  //     let data = await fetch(
-  //       "https://api.apilayer.com/fixer/latest?base=USD&symbols=EUR,USD,UAH",
-  //       requestOptions
-  //     );
-  //     let response = await data.json();
-  //     setData(response);
-  //     setRates(response.rates);
-  //   } catch (error) {
-  //     alert(error?.message);
-  //   }
-  // };
-  // useEffect(() => {
-  //   fetchingTheData();
-  // }, []);
+  const fetchingTheData = async () => {
+    try {
+      let data = await fetch(
+        "https://api.apilayer.com/fixer/latest?base=USD&symbols=EUR,USD,UAH",
+        requestOptions
+      );
+      let response = await data.json();
+      setData(response);
+      setRates(response.rates);
+    } catch (error) {
+      alert(error?.message);
+    }
+  };
+  useEffect(() => {
+    fetchingTheData();
+  }, []);
 
   function handleInput1Change(input1) {
     setInput2(((input1 * rates[select2]) / rates[select1]).toFixed(2));
