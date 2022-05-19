@@ -23,7 +23,7 @@ function App() {
   const fetchingTheData = async () => {
     try {
       let data = await fetch(
-        "https://api.apilayer.com/fixer/latest?base=USD&symbols=EUR,USD,UAH",
+        "https://api.apilayer.com/fixer/latest?base=USD&symbols=EUR,USD,UAH,CNY",
         requestOptions
       );
       let response = await data.json();
@@ -48,7 +48,7 @@ function App() {
   }
 
   function handleInput2Change(input2) {
-    setInput1(((input2 * rates[select2]) / rates[select1]).toFixed(2));
+    setInput1(((input2 * rates[select1]) / rates[select2]).toFixed(2));
     setInput2(input2);
   }
 

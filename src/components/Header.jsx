@@ -1,11 +1,8 @@
 import React from "react";
 import logoEur from "../images/eurlogo.png";
-import logoUah from "../images/uahlogo.png";
 import logoUsd from "../images/usalogo.png";
 
-export default function Header({ data, rates, input1, select2, select1 }) {
-  // const { data } = data;
-  console.log(data);
+export default function Header({ data, rates }) {
   let result = ((1 * rates.UAH) / rates.EUR).toFixed(2);
   let result2 = ((1 * rates.UAH) / rates.USD).toFixed(2);
   return (

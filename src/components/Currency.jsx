@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 
 export default function Currency(props) {
-  const { data, input, rates, select, onChangeInput, onChangeSelect } = props;
+  const { input, rates, select, onChangeInput, onChangeSelect } = props;
 
   return (
     <div className="currency">
